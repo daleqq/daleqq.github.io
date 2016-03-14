@@ -15,7 +15,7 @@
         }
 
         table:hover {
-            cursor: url('img/hammer.png'), auto;
+            cursor: url('img/hammer1.png'), auto;
             /* 此处图片路径要依据自己的路径来修改 */
         }
 
@@ -116,14 +116,14 @@
                     score += 1;
                     knock += 1;
                     success = knock / beat;
-                    document.form1.success.value = success;
+                    document.form1.success.value = Math.round(success * 100) + "%";
                     document.form1.score.value = score;
                     document.getElementById("td[" + id + "]").innerHTML = "";
                 }
                 else {
                     score += -1;
                     success = knock / beat;
-                    document.form1.success.value = success;
+                    document.form1.success.value = Math.round(success * 100) + "%";
                     document.form1.score.value = score;
                 }
             }
@@ -134,7 +134,7 @@
             playing = true;
             interId = setInterval("show()", 1000);
             document.form1.score.value = score;
-            document.form1.success.value = success;
+            document.form1.success.value = Math.round(success * 100) + "%";
             timeShow();
         }
     </script>
