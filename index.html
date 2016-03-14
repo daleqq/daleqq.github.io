@@ -53,7 +53,24 @@
                 interId = null,        //指定setInterval()的变量
                 timeId = null;         //指定setTimeout()的变量
 
-        var images = {};
+        var images = [ 
+            "img/mouse.png",
+            "img/mouse.png",
+            "img/mouse.png",
+            "img/mouse.png",
+            "img/mouse.png",
+            "img/mouse.png",
+            "img/mouse.png",
+            "img/mouse.png",
+            "img/mouse.png",
+            "img/mouse.png",
+            "img/mouse.png",
+            "img/mouse.png",
+            "img/mouse.png",
+            "img/mouse.png",
+            "img/mouse.png",
+            "img/mouse.png",
+        ];
 
         //游戏结束
         function GameOver() {
@@ -91,7 +108,7 @@
             if (playing) {
                 var current = Math.floor(Math.random() * 16);
                 //这里的路径也需要根据自己的实际文件路径来修改
-                document.getElementById("td[" + current + "]").innerHTML = '<img class="img" src="img/mouse.png"><p class="tex">老师,我是猪!</p>';
+                document.getElementById("td[" + current + "]").innerHTML = '<img class="img" src="' + images[current] + '"><p class="tex">老师,我是猪!</p>';
                 //使用setTimeout()实现3秒后隐藏老鼠图片
                 setTimeout("document.getElementById('td[" + current + "]').innerHTML=''", 3000);
             }
