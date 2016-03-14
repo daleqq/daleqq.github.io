@@ -132,6 +132,7 @@
             else {
                 beat += 1;
                 if (document.getElementById("td[" + id + "]").innerHTML != "") {
+                    document.getElementById('screech').play();
                     score += 1;
                     knock += 1;
                     success = knock / beat;
@@ -157,6 +158,7 @@
             timeShow();
         }
     </script>
+    <audio id="screech" src="audio/screech.mp3" preload="auto"></audio>
 </head>
 <body>
 <div id="content">
